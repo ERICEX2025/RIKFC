@@ -1,0 +1,54 @@
+body{
+  background-color: #212529;
+}
+
+.home {
+  height: 95vh;
+  background-image: url('Home.jpeg');
+  background-size: cover;           /* fills the area without stretching */
+  background-position: top center;  /* keeps it anchored */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay for text readability */
+  z-index: 1;
+}
+
+.home > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.btn:hover,
+.btn:focus {
+filter: brightness(130%)
+}
+
+
+.text-large {
+  font-size: 500%;
+}
+
+
+.learn-more {
+  height: 25vh;
+}
+
+.footer_bottom ul li a img {
+  transition: transform 0.2s ease;
+}
+.footer_bottom ul li a:hover img {
+  transform: scale(1.1);
+}
