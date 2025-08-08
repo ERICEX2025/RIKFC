@@ -2,19 +2,36 @@ body{
   background-color: #212529;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 139px;
+}
+
+.blur-navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Optionally add a semi-transparent background for contrast */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.no-blur-navbar {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background-color: transparent;
+}
+
 .home {
-  height: 95vh;
+  height: 100vh;
   background-image: url('Home.jpeg');
   background-size: cover;           /* fills the area without stretching */
   background-position: top center;  /* keeps it anchored */
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-top: 28vh;
   position: relative;
   color: white;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .home::before {
@@ -41,14 +58,66 @@ filter: brightness(130%)
   font-size: 500%;
 }
 
-
-.learn-more {
-  height: 25vh;
-}
-
 .footer_bottom ul li a img {
   transition: transform 0.2s ease;
 }
 .footer_bottom ul li a:hover img {
   transform: scale(1.1);
+}
+
+/* .nav-link:hover,
+.nav-link.active {
+  color: white !important;
+  font-weight: bolder;
+} */
+
+.navbar-brand {
+  z-index: 1101; /* Higher than fullscreen-menu (which is 1050) */
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+@media (max-width: 991.98px) {
+  .fullscreen-menu {
+    position: fixed !important;
+    top: -100vh; /* hidden off screen initially */
+    left: 0;
+    z-index: 1050;
+    padding-top: 200px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    transition: top 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .fullscreen-menu.show {
+    top: 0;
+  }
+
+  .fullscreen-menu.collapse,
+  .fullscreen-menu.collapsing {
+    height: 100vh !important;
+    width: 100vw !important;
+    transition: none !important;
+  }
+
+ .fullscreen-menu .nav-link {
+   font-size: 1.5rem;
+   padding: 1rem;
+ }
+
+ /* hamburger  */
+ .navbar-toggler {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   z-index: 1100;
+ }
 }
