@@ -15,6 +15,7 @@
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
+  const contactForm = document.getElementById('contact-form');
 
   // ==========================================================================
   // Utility Functions
@@ -121,19 +122,86 @@
   }
 
   // ==========================================================================
+  // Contact Form Handling
+  // ==========================================================================
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+
+    // For now, show a message since there's no backend
+    // In production, you'd send this to a backend or service like Formspree
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = 'Message Sent!';
+    submitBtn.disabled = true;
+
+    // Create mailto link as fallback
+    const subject = encodeURIComponent(`RIKFC Website: ${data.subject}`);
+    const body = encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+    );
+
+    // Open email client
+    window.location.href = `mailto:info@rikfc.org?subject=${subject}&body=${body}`;
+
+    // Reset form after delay
+    setTimeout(() => {
+      contactForm.reset();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }, 3000);
+  }
+
+  // ==========================================================================
+  // Smooth Scroll for Anchor Links (with offset for fixed navbar)
+  // ==========================================================================
+
+  function handleAnchorClick(e) {
+    const href = e.currentTarget.getAttribute('href');
+
+    if (href.startsWith('#')) {
+      const target = document.querySelector(href);
+
+      if (target) {
+        e.preventDefault();
+
+        const navbarHeight = navbar.offsetHeight;
+        const targetPosition = target.offsetTop - navbarHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+
+        // Close mobile menu if open
+        if (window.innerWidth <= 768) {
+          closeMobileMenu();
+        }
+      }
+    }
+  }
+
+  // ==========================================================================
   // Event Listeners
   // ==========================================================================
 
   // Mobile menu toggle
   navToggle.addEventListener('click', toggleMobileMenu);
 
-  // Close mobile menu when a nav link is clicked
+  // Nav link clicks - smooth scroll and close mobile menu
   navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        closeMobileMenu();
-      }
-    });
+    link.addEventListener('click', handleAnchorClick);
+  });
+
+  // All anchor links with hash
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    if (!anchor.classList.contains('nav-link')) {
+      anchor.addEventListener('click', handleAnchorClick);
+    }
   });
 
   // Throttled scroll handler (fires at most every 16ms ~60fps)
@@ -147,10 +215,18 @@
     }
   });
 
+  // Contact form submission
+  if (contactForm) {
+    contactForm.addEventListener('submit', handleFormSubmit);
+  }
+
   // ==========================================================================
   // Initialize
   // ==========================================================================
 
   // Run scroll handler on page load to set initial state
   handleScroll();
+
+  // Add loaded class for any CSS transitions that should only run after load
+  document.body.classList.add('loaded');
 })();
