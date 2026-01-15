@@ -3,132 +3,515 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rhode Island Kung Fu Club</title>
-    <meta name="description" content="Rhode Island Kung Fu Club - RIKFC is a non-profit martial/cultural arts group practicing kung fu & lion dance in the Providence-area." />
+    <title>Rhode Island Kung Fu Club | Kung Fu & Lion Dance in Providence</title>
+    <meta name="description" content="Rhode Island Kung Fu Club (RIKFC) is a non-profit teaching kung fu and Chinese lion dance to Providence-area youth since 2007. Book performances or join classes." />
     <meta name="author" content="Rhode Island Kung Fu Club" />
-    <link rel="icon" href="logo.png" type="image/x-icon" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+    <meta name="keywords" content="kung fu, lion dance, Providence, Rhode Island, martial arts, Chinese culture, Lunar New Year, youth programs" />
+    <link rel="icon" href="RIKFC_logo.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
 
     <meta name="theme-color" content="#dc3545" />
     <meta property="og:title" content="Rhode Island Kung Fu Club" />
-    <meta property="og:description" content="The RIKFC is a non-profit martial/cultural arts group practicing kung fu & lion dance in the Providence-area." />
-    <meta property="og:image" content="logo.png" />
+    <meta property="og:description" content="Non-profit teaching kung fu & Chinese lion dance to Providence-area youth since 2007." />
+    <meta property="og:image" content="RIKFC_logo.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rikfc.org" />
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent py-3">
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <!-- Brand on the left -->
-        <a href="#" class="navbar-brand">
-          <img src="RIKFC_logo.png" width="85" alt="RIKFC logo" class="d-inline-block align-middle me-2" />
-        </a>
+    <header>
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="#home" class="nav-brand">
+            <img src="RIKFC_logo.png" width="85" alt="Rhode Island Kung Fu Club logo" />
+          </a>
 
-        <!-- Nav links (centered on lg+, stacked on mobile) -->
-        <div class="order-3 order-lg-2 collapse navbar-collapse fullscreen-menu position-absolute top-42 start-50 translate-middle-x text-center" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a href="#about_us" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Placeholder</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Placeholder</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Placeholder</a></li>
+          <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#programs" class="nav-link">Programs</a></li>
+            <li class="nav-item"><a href="#performances" class="nav-link">Performances</a></li>
+            <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+
+            <li class="nav-social mobile-only">
+              <a href="https://facebook.com/RIKFC" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="fb.png" alt="Facebook" width="28" />
+              </a>
+              <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="instagram.png" alt="Instagram" width="28" />
+              </a>
+            </li>
           </ul>
-          
-          <div class="d-lg-none mt-4">
-            <a href="https://facebook.com/RIKFC" target="_blank" class="me-3">
+
+          <div class="nav-social desktop-only">
+            <a href="https://facebook.com/RIKFC" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <img src="fb.png" alt="Facebook" width="28" />
             </a>
-            <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank">
+            <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <img src="instagram.png" alt="Instagram" width="28" />
             </a>
           </div>
+
+          <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ==================== HOME / HERO ==================== -->
+      <section id="home" class="hero" data-navbar="transparent-blur">
+        <div class="hero-content">
+          <p class="hero-subtitle">Est. 2007 &bull; Providence, RI</p>
+          <h1 class="hero-title">Rhode Island<br>Kung Fu Club</h1>
+          <p class="hero-tagline">Teaching kung fu & Chinese lion dance to Providence-area youth</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">Book a Performance</a>
+            <a class="btn btn-outline" href="#programs">Our Programs</a>
+          </div>
+        </div>
+        <div class="hero-scroll-indicator" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <!-- ==================== ABOUT ==================== -->
+      <section id="about" class="about" data-navbar="dark">
+        <div class="container">
+          <h2 class="section-label">About Us</h2>
+          <h3 class="section-title">Cultivating Patience, Perseverance & Community</h3>
+
+          <div class="about-grid">
+            <div class="about-content">
+              <p class="lead">
+                The Rhode Island Kung Fu Club is a 501(c)(3) non-profit organization that has taught the martial and cultural arts of kung fu and Chinese lion dance to Providence-area youth since 2007.
+              </p>
+              <p>
+                We operate through volunteer efforts and welcome members of all cultural backgrounds. Our mission is to utilize martial arts training to assist young people in their maturation and growth.
+              </p>
+              <p>
+                The effort and commitment required to develop kung fu and lion dance skills cultivates <strong>patience</strong> and <strong>perseverance</strong>&mdash;cornerstone ideals that will serve our members well throughout their lives.
+              </p>
+            </div>
+            <div class="about-image-container">
+              <img src="Fam.jpeg" alt="Rhode Island Kung Fu Club members and students gathered together" class="about-image" />
+            </div>
+          </div>
+
+          <!-- Values -->
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">&#x2764;</div>
+              <h4>Community</h4>
+              <p>Building connections across cultures through shared practice and performance</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">&#x1F3AF;</div>
+              <h4>Discipline</h4>
+              <p>Developing focus, respect, and commitment through dedicated training</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">&#x1F31F;</div>
+              <h4>Tradition</h4>
+              <p>Preserving and sharing the rich heritage of Chinese martial and cultural arts</p>
+            </div>
+          </div>
+
+          <!-- Leadership -->
+          <div class="leadership">
+            <h3 class="subsection-title">Our Leadership</h3>
+            <div class="leader-card">
+              <div class="leader-image-placeholder">
+                <!-- Replace with actual photo -->
+                <span>LS</span>
+              </div>
+              <div class="leader-info">
+                <h4>Luyi Shao</h4>
+                <p class="leader-title">Director & Instructor</p>
+                <p>
+                  Luyi Shao is a student of the Wong People Kung Fu Association and Sifu Raymond Wong in Washington, D.C., continuing a lineage of Jow Ga kung fu that traces back to Dean Chin, a 3rd generation disciple of the founding Jow brothers.
+                </p>
+                <p>
+                  In addition to being a dedicated kung fu practitioner, Luyi is a professional educator with classroom teaching experience. He is committed to helping youth develop both inside and outside of martial arts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lineage -->
+          <div class="lineage">
+            <h3 class="subsection-title">Our Lineage</h3>
+            <div class="lineage-path">
+              <div class="lineage-item">
+                <span class="lineage-name">Jow Biu</span>
+                <span class="lineage-desc">Founding Brother, Jow Ga Kung Fu</span>
+              </div>
+              <div class="lineage-arrow">→</div>
+              <div class="lineage-item">
+                <span class="lineage-name">Dean Chin</span>
+                <span class="lineage-desc">3rd Generation Disciple</span>
+              </div>
+              <div class="lineage-arrow">→</div>
+              <div class="lineage-item">
+                <span class="lineage-name">Sifu Raymond Wong</span>
+                <span class="lineage-desc">Wong People Kung Fu Association, D.C.</span>
+              </div>
+              <div class="lineage-arrow">→</div>
+              <div class="lineage-item active">
+                <span class="lineage-name">Luyi Shao</span>
+                <span class="lineage-desc">Rhode Island Kung Fu Club</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROGRAMS ==================== -->
+      <section id="programs" class="programs" data-navbar="dark">
+        <div class="container">
+          <h2 class="section-label">What We Teach</h2>
+          <h3 class="section-title">Our Programs</h3>
+
+          <div class="programs-grid">
+            <!-- Kung Fu -->
+            <div class="program-card">
+              <div class="program-image">
+                <img src="kung-fu.jpeg" alt="Kung fu training demonstration" />
+              </div>
+              <div class="program-content">
+                <h4>Kung Fu Training</h4>
+                <p class="program-style">Jow Ga Style</p>
+                <p>
+                  Our kung fu curriculum is rooted in the Jow Ga system, a traditional Southern Chinese martial art known for its powerful stances, dynamic kicks, and fluid hand techniques.
+                </p>
+                <ul class="program-features">
+                  <li>Traditional forms and techniques</li>
+                  <li>Self-defense applications</li>
+                  <li>Physical conditioning</li>
+                  <li>Weapons training (advanced)</li>
+                  <li>Competition preparation</li>
+                </ul>
+                <p class="program-note">
+                  RIKFC members have participated in martial arts competitions throughout New England and the East Coast.
+                </p>
+              </div>
+            </div>
+
+            <!-- Lion Dance -->
+            <div class="program-card">
+              <div class="program-image">
+                <img src="lion-dance.jpeg" alt="Chinese lion dance performance" />
+              </div>
+              <div class="program-content">
+                <h4>Chinese Lion Dance</h4>
+                <p class="program-style">Southern Lion Style</p>
+                <p>
+                  Chinese lion dance (舞獅) is a festive, cultural performance combining the movement and spirit of kung fu with drumming and percussion. It symbolizes fostering positivity and warding away negative energy.
+                </p>
+                <ul class="program-features">
+                  <li>Lion head and tail coordination</li>
+                  <li>Traditional drumming patterns</li>
+                  <li>Cymbal and gong techniques</li>
+                  <li>Cai Qing (採青) - "Plucking the Greens"</li>
+                  <li>Performance choreography</li>
+                </ul>
+                <div class="tradition-highlight">
+                  <h5>The Lucky Lettuce Tradition</h5>
+                  <p>
+                    During performances, our lions perform <em>Cai Qing</em>&mdash;plucking lettuce hung above doorways. The word for lettuce (菜/Cai) sounds like "wealth" in Chinese. By scattering the greens, the lion spreads prosperity and good fortune to all present.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Youth Focus -->
+          <div class="youth-focus">
+            <div class="youth-content">
+              <h4>Youth Development Focus</h4>
+              <p>
+                We collaborate with local schools and community centers through our outreach program, providing access to kung fu instruction for Providence-area youth. Our training instills values that extend far beyond the practice floor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PERFORMANCES ==================== -->
+      <section id="performances" class="performances" data-navbar="dark">
+        <div class="container">
+          <h2 class="section-label">In the Community</h2>
+          <h3 class="section-title">Performances & Events</h3>
+
+          <p class="section-intro">
+            The RIKFC shares kung fu and lion dance with both Chinese and non-Chinese audiences throughout Rhode Island. From intimate cultural celebrations to large-scale festivals, we bring energy, tradition, and good fortune wherever we perform.
+          </p>
+
+          <!-- Featured Venues -->
+          <div class="venues-grid">
+            <div class="venue-card">
+              <div class="venue-icon">&#x1F525;</div>
+              <h4>WaterFire Providence</h4>
+              <p>Performing at one of Providence's most iconic arts events</p>
+            </div>
+            <div class="venue-card">
+              <div class="venue-icon">&#x1F3AD;</div>
+              <h4>PVDFest</h4>
+              <p>Celebrating arts and culture in downtown Providence</p>
+            </div>
+            <div class="venue-card">
+              <div class="venue-icon">&#x1F3A8;</div>
+              <h4>Pawtucket Arts Festival</h4>
+              <p>Bringing martial arts to the local arts community</p>
+            </div>
+            <div class="venue-card">
+              <div class="venue-icon">&#x1F3B6;</div>
+              <h4>FirstWorks Providence</h4>
+              <p>Collaborating with performing arts organizations</p>
+            </div>
+            <div class="venue-card">
+              <div class="venue-icon">&#x1F38A;</div>
+              <h4>RI Heritage Festival</h4>
+              <p>Showcasing Rhode Island's cultural diversity</p>
+            </div>
+            <div class="venue-card">
+              <div class="venue-icon">&#x1F409;</div>
+              <h4>Lunar New Year</h4>
+              <p>Traditional celebrations throughout the community</p>
+            </div>
+          </div>
+
+          <!-- Collaboration Highlight -->
+          <div class="collab-highlight">
+            <div class="collab-content">
+              <span class="collab-label">Featured Collaboration</span>
+              <h4>Ballet RI's Nutcracker</h4>
+              <p>
+                In 2023, RIKFC collaborated with Ballet RI to ensure authenticity in the Chinese dance portions of their Nutcracker production, bringing traditional lion dance to the classical ballet stage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Booking CTA -->
+          <div class="booking-cta">
+            <h4>Book Us For Your Event</h4>
+            <p>
+              Bring the excitement and good fortune of lion dance to your celebration, business opening, wedding, school, or community event.
+            </p>
+            <a href="#contact" class="btn btn-primary">Request a Performance</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== GALLERY ==================== -->
+      <section id="gallery" class="gallery" data-navbar="dark">
+        <div class="container">
+          <h2 class="section-label">See Us in Action</h2>
+          <h3 class="section-title">Gallery</h3>
+
+          <p class="section-intro">
+            Follow us on Instagram <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank" rel="noopener noreferrer">@ri.kungfuclub</a> for photos and videos from our latest performances and training sessions.
+          </p>
+
+          <!-- Gallery Grid - Placeholder for images -->
+          <div class="gallery-grid">
+            <div class="gallery-item gallery-item-large">
+              <img src="Home.jpeg" alt="RIKFC lion dance performance" />
+            </div>
+            <div class="gallery-item">
+              <img src="Fam.jpeg" alt="RIKFC club members" />
+            </div>
+            <div class="gallery-item">
+              <img src="kung-fu.jpeg" alt="Kung fu training" />
+            </div>
+            <div class="gallery-item">
+              <img src="lion-dance.jpeg" alt="Lion dance" />
+            </div>
+            <!-- Placeholder items for future images -->
+            <div class="gallery-item gallery-placeholder">
+              <span>+</span>
+              <p>More photos coming soon</p>
+            </div>
+            <div class="gallery-item gallery-placeholder">
+              <span>+</span>
+              <p>More photos coming soon</p>
+            </div>
+          </div>
+
+          <div class="gallery-cta">
+            <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              View More on Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SUPPORT ==================== -->
+      <section id="support" class="support" data-navbar="dark">
+        <div class="container">
+          <h2 class="section-label">Support Our Mission</h2>
+          <h3 class="section-title">Help Us Grow</h3>
+
+          <div class="support-content">
+            <p class="lead">
+              As a 501(c)(3) non-profit, the Rhode Island Kung Fu Club relies on community support to continue our mission of teaching kung fu and lion dance to Providence-area youth.
+            </p>
+            <p>
+              Your donation helps us provide instruction, maintain equipment, and expand our community outreach programs. In 2024, we were honored to receive a THRIVE grant from Rhode Island Humanities in recognition of our work promoting cultural heritage and cross-cultural understanding.
+            </p>
+
+            <div class="support-options">
+              <div class="support-card">
+                <h4>Donate</h4>
+                <p>Support our programs with a tax-deductible contribution</p>
+                <a href="#contact" class="btn btn-primary">Make a Donation</a>
+              </div>
+              <div class="support-card">
+                <h4>Volunteer</h4>
+                <p>Share your time and skills with our organization</p>
+                <a href="#contact" class="btn btn-outline">Get Involved</a>
+              </div>
+              <div class="support-card">
+                <h4>Spread the Word</h4>
+                <p>Follow us and share our mission with your community</p>
+                <div class="support-social">
+                  <a href="https://facebook.com/RIKFC" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="fb.png" alt="Facebook" width="32" />
+                  </a>
+                  <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="instagram.png" alt="Instagram" width="32" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <p class="tax-note">
+              Rhode Island Kung Fu & Lion Dance Club is a registered 501(c)(3) organization. EIN: 27-1489682
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CONTACT ==================== -->
+      <section id="contact" class="contact" data-navbar="dark">
+        <div class="container">
+          <h2 class="section-label">Get in Touch</h2>
+          <h3 class="section-title">Contact Us</h3>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="contact-card">
+                <h4>Join Our Club</h4>
+                <p>Interested in learning kung fu or lion dance? We welcome students of all ages and backgrounds.</p>
+              </div>
+
+              <div class="contact-card">
+                <h4>Book a Performance</h4>
+                <p>Bring the excitement of lion dance to your event&mdash;Lunar New Year, business openings, weddings, schools, and more.</p>
+              </div>
+
+              <div class="contact-card">
+                <h4>Community Partnerships</h4>
+                <p>Schools and community organizations interested in our outreach programs are encouraged to reach out.</p>
+              </div>
+
+              <div class="contact-social">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                  <a href="https://facebook.com/RIKFC" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <img src="fb.png" alt="" width="24" />
+                    <span>Facebook</span>
+                  </a>
+                  <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <img src="instagram.png" alt="" width="24" />
+                    <span>Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-container">
+              <form class="contact-form" id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">I'm interested in...</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Select an option</option>
+                    <option value="classes">Joining classes</option>
+                    <option value="performance">Booking a performance</option>
+                    <option value="partnership">Community partnership</option>
+                    <option value="donation">Making a donation</option>
+                    <option value="volunteer">Volunteering</option>
+                    <option value="other">Other inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+
+                <p class="form-note">
+                  You can also reach us directly through our social media channels.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="RIKFC_logo.png" alt="RIKFC Logo" width="60" />
+            <p>Rhode Island Kung Fu Club</p>
+            <p class="footer-tagline">羅州功夫團</p>
+          </div>
+
+          <div class="footer-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#performances">Performances</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social-section">
+            <h5>Follow Us</h5>
+            <div class="footer-social">
+              <a href="https://facebook.com/RIKFC" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="fb.png" alt="Facebook" width="28" />
+              </a>
+              <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="instagram.png" alt="Instagram" width="28" />
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Social icons on the right -->
-        <div class="d-none d-lg-flex align-items-center gap-3 order-lg-4">
-          <a href="https://facebook.com/RIKFC" target="_blank">
-            <img src="fb.png" alt="Facebook" width="28" />
-          </a>
-          <a href="https://www.instagram.com/ri.kungfuclub/" target="_blank">
-            <img src="instagram.png" alt="Instagram" width="28" />
-          </a>
-        </div>
-
-        <!-- Toggler on the right (mobile only) -->
-        <button class="navbar-toggler order-2 order-lg-3" type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-      </div>
-    </nav>
-
-    <section id="home" class="home" data-navbar="transparent-blur">
-      <h1 class="display-1 fw-bold mb-0" style="color: #f8f9fa;">Rhode Island</h1>
-      <h1 class="display-1 fw-bold mb-4" style="color: #f8f9fa;">Kung Fu Club</h1>
-      <div class="d-flex justify-content-center gap-3">
-        <a
-          class="btn bg-dark text-light btn-lg"
-          href="#about_us"
-          role="button"
-        >Showtimes</a>
-        <a
-          class="btn bg-danger text-light btn-lg"
-          href="#"
-          role="button"
-        >Contact Us</a>
-      </div>
-    </section>
-
-    <section id="about_us" class="container text-light bg-dark text-center" data-navbar="dark">
-      <h2 class="pt-5 pb-3">About Us</h2>
-      <p class="lead px-4 pb-5">
-        The Rhode Island Kung Fu Club is a non-profit martial/cultural arts group practicing kung fu & lion dance in the Providence-area. The RIKFC has taught the martial and cultural
-        arts of Kung Fu and Chinese Lion Dance to Providence-area youth since 2007. The Rhode Island Kung Fu Club is a non-profit martial/cultural arts group practicing kung fu & lion dance in the Providence-area. The RIKFC has taught the martial and cultural
-        arts of Kung Fu and Chinese Lion Dance to Providence-area youth since 2007. The Rhode Island Kung Fu Club is a non-profit martial/cultural arts group practicing kung fu & lion dance in the Providence-area. The RIKFC has taught the martial and cultural
-        arts of Kung Fu and Chinese Lion Dance to Providence-area youth since 2007. The Rhode Island Kung Fu Club is a non-profit martial/cultural arts group practicing kung fu & lion dance in the Providence-area. The RIKFC has taught the martial and cultural
-        arts of Kung Fu and Chinese Lion Dance to Providence-area youth since 2007. The Rhode Island Kung Fu Club is a non-profit martial/cultural arts group practicing kung fu & lion dance in the Providence-area. The RIKFC has taught the martial and cultural
-        arts of Kung Fu and Chinese Lion Dance to Providence-area youth since 2007. 
-      </p>
-      <img src="Fam.jpeg" class="img-fluid mb-5" alt="Responsive image" />
-    </section>
-    
-    <footer class="footer_bottom bg-danger text-light py-4">
-      <div class="container d-flex flex-column align-items-center text-center">
-        
-        <ul class="list-unstyled d-flex gap-3 mb-3">
-          <li>
-            <a href="https://facebook.com/RIKFC" target="_blank">
-              <img src="fb.png" alt="Facebook" width="32" />
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/RIKFC" target="_blank">
-              <img src="instagram.png" alt="Instagram" width="32" />
-            </a>
-          </li>
-        </ul>
-    
-        <div>
-          <p class="mb-0 small">&copy; 2025 Rhode Island Kung Fu Club. All rights reserved.</p>
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2025 Rhode Island Kung Fu & Lion Dance Club. All rights reserved.</p>
+          <p class="footer-nonprofit">501(c)(3) Non-Profit Organization &bull; EIN: 27-1489682</p>
         </div>
       </div>
     </footer>
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
 
     <script src="main.js"></script>
   </body>
