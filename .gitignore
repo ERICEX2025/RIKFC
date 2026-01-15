@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# IDE and editor files
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Large unused image files (consider removing from repo)
+# Uncomment these if you want to stop tracking them:
+# red-lion.png
+# red-logo.png
+# RIKFC_lion.png
