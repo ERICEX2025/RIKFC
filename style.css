@@ -662,6 +662,14 @@ section {
   margin-bottom: var(--spacing-xs);
 }
 
+.lineage-name .chinese {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
 .lineage-desc {
   display: block;
   font-size: var(--font-size-xs);
@@ -1243,12 +1251,16 @@ section {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     transform: translateY(-100%);
-    transition: transform var(--transition-slow);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform var(--transition-slow), visibility var(--transition-slow), opacity var(--transition-slow);
     z-index: 1050;
   }
 
   .nav-menu.open {
     transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
   }
 
   .nav-menu .nav-link {
@@ -1263,7 +1275,7 @@ section {
   }
 
   .desktop-only {
-    display: none;
+    display: none !important;
   }
 
   .hero-buttons {
