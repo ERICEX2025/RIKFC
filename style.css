@@ -662,6 +662,14 @@ section {
   margin-bottom: var(--spacing-xs);
 }
 
+.lineage-name .chinese {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
 .lineage-desc {
   display: block;
   font-size: var(--font-size-xs);
