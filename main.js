@@ -153,7 +153,7 @@
     );
 
     // Open email client
-    window.location.href = `mailto:info@rikfc.org?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:shaoluyi@gmail.com?subject=${subject}&body=${body}`;
 
     // Reset form after delay
     setTimeout(() => {
