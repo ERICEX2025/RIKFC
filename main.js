@@ -107,7 +107,14 @@
     // Update navbar style based on current section
     if (currentSection) {
       const style = currentSection.dataset.navbar;
-      updateNavbarStyle(style);
+
+      // At the very top of the page, use transparent (no blur)
+      // Once user scrolls a bit, apply the section's style
+      if (scrollY < 50) {
+        updateNavbarStyle('transparent');
+      } else {
+        updateNavbarStyle(style);
+      }
 
       // Update active nav link
       const currentId = currentSection.getAttribute('id');
@@ -116,7 +123,7 @@
       });
     } else {
       // Default to transparent when at the very top
-      updateNavbarStyle('transparent-blur');
+      updateNavbarStyle('transparent');
       navLinks.forEach((link) => link.classList.remove('active'));
     }
   }
